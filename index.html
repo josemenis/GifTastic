@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>GifTastic</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,11 +10,24 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <div>
+    
+    <div class="container">             
         <h1><strong>GifTastic</strong></h1>
-    </div>      
+    <br>
     <div>
-        <!--create a list of buttons that will evenetually become linked with giphy -->
+    <!-- Animals will get dumped here -->
+    <div id="buttons-view"></div>
+    <br>
+    <!-- grab this ID -->
+    <form id="animal-form">
+    <label for="animal-input">Add a animal</label>
+    <input type="text" id="animal-input"><br>
+                
+    <!-- Button triggers new animal to be added -->
+    <input id="add-animal" type="submit" value="Add a animal">
+    </form>
+    </div>
+        <!-- create a list of buttons that will evenetually become linked with giphy
         <button type="button" class="btn btn-primary">Primary</button>
 <button type="button" class="btn btn-secondary">Secondary</button>
 <button type="button" class="btn btn-success">Success</button>
@@ -24,7 +37,7 @@
 <button type="button" class="btn btn-light">Light</button>
 <button type="button" class="btn btn-dark">Dark</button>
 
-<button type="button" class="btn btn-link">Link</button>
+<button type="button" class="btn btn-link">Link</button> -->
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
