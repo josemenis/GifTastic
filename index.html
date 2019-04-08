@@ -12,30 +12,36 @@
   <body>
     
 <div id="container">             
-    <h1><strong>GifTastic</strong></h1>
+    <h1><strong>GifTastic Motha F***a, Please!</strong></h1>
     <br>
-    <!-- Animals will get dumped here -->
-  <div class="row">
-    <!-- buttons and form share a row -->
-    <div class="col-lg-8" id="buttons-view">
-    <button data-animal="cat">meow</button>
-    <button data-animal="dog">woof</button>
-    <button data-animal="bird">chirp</button>
-    </div>
-    <!-- form share a row with buttons -->
-    <div class="col-md-4 float-right">
-    <form id="animal-form">
-    <label for="animal-input">Add a animal</label>
-    <input type="text" id="animal-input"><br>
-    
-    <!-- Button triggers new animal to be added -->
-    <input id="add-animal" type="submit" value="Add a animal">
-    </form>
-    </div>
-  <!-- Gifs will appear in this row -->
-  <div class="row" id="gifs-appear-here"></div>
+    <!-- Animals will get dumped here, after pre set list of buttons-->
+  <div class="row" id="buttons-view">
+    <button data-animal="dog">--dog</button>
+    <button data-animal="cat">cat</button>
+    <button data-animal="bird">bird</button>
+    <button data-animal="fish">fish</button>
+    <button data-animal="horse">horse</button>
+    <button data-animal="rabbit">rabbit</button>
+    <button data-animal="mouse">mouse</button>
+    <button data-animal="alligator">alligator</button>
+    <button data-animal="shark">shark</button>
+    <button data-animal="whale">whale</button>
   </div>
-</div>
+  <br>
+    <!-- Gifs will appear in this col section -->
+    <div class="col-md-8 float-left" id="gifs-appear-here"></div>
+    <!-- form share a row with gifs appearing -->
+    <div class="col-md-4 float-right">
+      <form id="animal-form">
+        <label for="animal-input">Add a animal</label>
+        <input type="text" id="animal-input"><br>
+        
+        <!-- Button triggers new animal to be added -->
+        <input id="add-animal" type="submit" value="Add a animal">
+      </form>
+    </div>
+  </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
