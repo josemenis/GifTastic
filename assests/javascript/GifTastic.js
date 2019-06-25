@@ -70,7 +70,12 @@ document.querySelector('#buttons-view').addEventListener('click', function (even
           var animalImage = document.createElement('img')
 
           // Setting the src attribute of the image to a property pulled off the result item
+          // set attributes to match the solved portion for pausing gifs. It worked!!
           animalImage.setAttribute('src', item.images.fixed_height.url)
+          animalImage.setAttribute('data-still', item.images.fixed_height_still.url)
+          animalImage.setAttribute('data-animate', item.images.fixed_height.url)
+          animalImage.setAttribute('data-state', 'still')
+
           // Appending the paragraph and image tag to the animalDiv
           animalDiv.appendChild(p)
           animalDiv.appendChild(animalImage)
@@ -101,7 +106,7 @@ document.querySelector('#add-animal').addEventListener('click', (event) => {
 
 /* =================================================================== */
 /* ===              Function for pausing Gifs                        = */
-/* === taken from pausing-gifs-solved, need to make it work though... */
+/* ===             Took from pausing-gifs-solved                     = */
 /* =================================================================== */
 document.querySelector('#container').addEventListener('click', function (event) {
   if (event.target.tagName === 'img'.toUpperCase()) {
