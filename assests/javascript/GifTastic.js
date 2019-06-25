@@ -1,11 +1,9 @@
-/* =================================================================== */
-/* ===               Function For Buttons in HTML                   = */
-/* ===             Pulls 10 random gifs from Giphy                  = */
-/* ================================================================== */
-
 // animals array
 var animals = ['dog', 'cat', 'bird', 'fish', 'horse', 'rabbit', 'mouse', 'alligator', 'shark', 'whale']
-// //////////////////////////////////////////////////////////////////////
+/* =================================================================== */
+/* ===               Function For Buttons in HTML                   = */
+/* ===                                                              = */
+/* ================================================================== */
 // Function for displaying animals data
 function renderButtons () {
   // Deleting the animals buttons prior to adding new animals buttons
@@ -32,29 +30,14 @@ function renderButtons () {
 // ////////////////////////////////////////////////////////////////////
 // calling renderButtons which handles the processing of our animal array
 renderButtons()
-// /////////////////////////////////////////////////////////////////////
-// This function handles events where one button is clicked
-document.querySelector('#add-animal').addEventListener('click', (event) => {
-  // event.preventDefault() prevents the form from trying to submit itself.
-  // We're using a form so that the user can hit enter instead of clicking the button if they want
-  event.preventDefault()
-
-  // This line will grab the text from the input box
-  var animal = document.querySelector('#animal-input').value.trim()
-  console.log('animal data', animal)
-  // The animal from the textbox is then added to our array
-  animals.push(animal)
-  renderButtons()
-})
-// //////////////////////////////////////////////////////////////////////////
 // Adding click event listen listener to all buttons in container
 document.querySelector('#container').addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
     // Grabbing and storing the data-animal property value from the button
-    var animal = event.target.dataset.animal
+    var animal = event.target.dataset.name
 
     // queryURL for Giphy API + my key and limits 10 animals gifs random
-    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${animal}&api_key=fVF3J7KazZyQXX2R41ITkVIa6Y3UEd0o&limit=10&rating=pg`
+    var queryURL = `http://api.giphy.com/v1/gifs/search?q=${animal}&api_key=fVF3J7KazZyQXX2R41ITkVIa6Y3UEd0o&limit=10&rating=pg`
     // asks giphy for animal search limited at 10
     fetch(queryURL, {
       method: 'GET'
@@ -88,7 +71,6 @@ document.querySelector('#container').addEventListener('click', function (event) 
 
           // Setting the src attribute of the image to a property pulled off the result item
           animalImage.setAttribute('src', item.images.fixed_height.url)
-          animalImage.setAttribute('data-animal', animal)
           // Appending the paragraph and image tag to the animalDiv
           animalDiv.appendChild(p)
           animalDiv.appendChild(animalImage)
@@ -100,6 +82,21 @@ document.querySelector('#container').addEventListener('click', function (event) 
       })
   }
 })
+// /////////////////////////////////////////////////////////////////////
+// This function handles events where one button is clicked
+document.querySelector('#add-animal').addEventListener('click', (event) => {
+  // event.preventDefault() prevents the form from trying to submit itself.
+  // We're using a form so that the user can hit enter instead of clicking the button if they want
+  event.preventDefault()
+
+  // This line will grab the text from the input box
+  var animal = document.querySelector('#animal-input').value.trim()
+  console.log('animal data', animal)
+  // The animal from the textbox is then added to our array
+  animals.push(animal)
+  renderButtons()
+})
+// //////////////////////////////////////////////////////////////////////////
 
 /* =================================================================== */
 /* ===              Function for pausing Gifs                        = */
