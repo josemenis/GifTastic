@@ -37,7 +37,7 @@ document.querySelector('#buttons-view').addEventListener('click', function (even
     var animal = event.target.dataset.name
 
     // queryURL for Giphy API + my key and limits 10 animals gifs random
-    var queryURL = `http://api.giphy.com/v1/gifs/search?q=${animal}&api_key=fVF3J7KazZyQXX2R41ITkVIa6Y3UEd0o&limit=10&rating=pg`
+    var queryURL = `https://api.giphy.com/v1/gifs/search?q=${animal}&api_key=fVF3J7KazZyQXX2R41ITkVIa6Y3UEd0o&limit=10&rating=pg`
     // asks giphy for animal search limited at 10
     fetch(queryURL, {
       method: 'GET'
