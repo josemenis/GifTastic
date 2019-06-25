@@ -31,7 +31,7 @@ function renderButtons () {
 // calling renderButtons which handles the processing of our animal array
 renderButtons()
 // Adding click event listen listener to all buttons in container
-document.querySelector('#container').addEventListener('click', function (event) {
+document.querySelector('#buttons-view').addEventListener('click', function (event) {
   if (event.target.tagName === 'BUTTON') {
     // Grabbing and storing the data-animal property value from the button
     var animal = event.target.dataset.name
@@ -82,8 +82,10 @@ document.querySelector('#container').addEventListener('click', function (event) 
       })
   }
 })
-// /////////////////////////////////////////////////////////////////////
+/* =================================================================== */
 // This function handles events where one button is clicked
+/* =================================================================== */
+
 document.querySelector('#add-animal').addEventListener('click', (event) => {
   // event.preventDefault() prevents the form from trying to submit itself.
   // We're using a form so that the user can hit enter instead of clicking the button if they want
@@ -96,23 +98,24 @@ document.querySelector('#add-animal').addEventListener('click', (event) => {
   animals.push(animal)
   renderButtons()
 })
-// //////////////////////////////////////////////////////////////////////////
 
 /* =================================================================== */
 /* ===              Function for pausing Gifs                        = */
 /* === taken from pausing-gifs-solved, need to make it work though... */
 /* =================================================================== */
-// if (event.target.tagName === 'img'.toUpperCase()) {
-//   let currentImg = event.target
-//   var state = currentImg.dataset.state
-//   // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-//   // Then, set the image's data-state to animate
-//   // Else set src to the data-still value
-//   if (state === 'still') {
-//     currentImg.setAttribute('src', currentImg.dataset.animate)
-//     currentImg.setAttribute('data-state', 'animate')
-//   } else {
-//     currentImg.setAttribute('src', currentImg.dataset.still)
-//     currentImg.setAttributegh('data-state', 'still')
-//   }
-// }
+document.querySelector('#container').addEventListener('click', function (event) {
+  if (event.target.tagName === 'img'.toUpperCase()) {
+    let currentImg = event.target
+    var state = currentImg.dataset.state
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+    if (state === 'still') {
+      currentImg.setAttribute('src', currentImg.dataset.animate)
+      currentImg.setAttribute('data-state', 'animate')
+    } else {
+      currentImg.setAttribute('src', currentImg.dataset.still)
+      currentImg.setAttribute('data-state', 'still')
+    }
+  }
+})
