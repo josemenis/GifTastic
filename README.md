@@ -1,7 +1,9 @@
 # GifTastic
 ---
 # Overview:
-   ## This App uses the Giphy API to search for animals. You can also add animals as well.
+   * This App uses the Giphy API to search for animals. You can also add animals as well.
+
+[Link to App](https://josemenis.github.io/GifTastic/)
 ---
 # How it works:
 
@@ -12,3 +14,7 @@
 * Under every gif, display its rating (PG, G, so on).
    * This data is provided by the GIPHY API.
    * Only once you get images displaying with button presses should you move on to the next step.
+
+![Before Adding Animal](GifTastic\assests\images\Giphy Dog.PNG)
+
+![After Adding Animal](GifTastic\assests\images\Giphy Bear.PNG)
