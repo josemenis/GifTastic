@@ -1,12 +1,12 @@
 # GifTastic
 ---
 # Overview:
-   * This App uses the Giphy API to search for animals. 
+   ## This App uses the Giphy API to search for animals. 
 
    ![Before Adding Animal](assests/images/Giphy_Dog.PNG)
 
    
-   * You can also add animals as well.
+   ## You can also add animals as well.
 
    ![After Adding Animal](assests/images/Giphy_Bear.PNG)
 
