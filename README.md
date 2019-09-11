@@ -15,6 +15,6 @@
    * This data is provided by the GIPHY API.
    * Only once you get images displaying with button presses should you move on to the next step.
 
-![Before Adding Animal](GifTastic\assests\images\Giphy_Dog.PNG)
+![Before Adding Animal](GifTastic/assests/images/Giphy_Dog.PNG)
 
-![After Adding Animal](GifTastic\assests\images\Giphy_Bear.PNG)
+![After Adding Animal](GifTastic/assests/images/Giphy_Bear.PNG)
