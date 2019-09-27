@@ -1,0 +1,14 @@
+body {
+    /* seems that this image cannot find in another folder with relative path */
+    background-image: url(slider-background-2.jpg);
+    background-size: cover;
+}
+/* selects p directly after h2*/
+* {
+    text-align: center;
+}
+h1, p {
+    color: #93002D;
+    border: 5px solid rgba(255, 176, 176, 0.5);
+    cursor: pointer;
+}
