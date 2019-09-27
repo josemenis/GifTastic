@@ -9,6 +9,11 @@ body {
 }
 h1, p {
     color: #93002D;
-    border: 5px solid rgba(255, 176, 176, 0.5);
+    border: 5px solid rgba(64, 120, 224, 0.5);
+    cursor: pointer;
+}
+h1, p {
+    color: blue;
+    border: 5px solid rgba(64, 120, 224, 0.5);
     cursor: pointer;
 }

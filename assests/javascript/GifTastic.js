@@ -1,5 +1,6 @@
 // animals array
-var animals = ['dog', 'cat', 'bird', 'fish', 'horse', 'rabbit', 'mouse', 'alligator', 'shark', 'whale']
+var animals = ['dog', 'cat', 'bird', 'fish', 'horse', 'rabbit', 'mouse', 'alligator', 'shark', 'whale'
+];
 /* =================================================================== */
 /* ===               Function For Buttons in HTML                   = */
 /* ===                                                              = */
