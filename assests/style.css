@@ -3,17 +3,22 @@ body {
     background-image: url(slider-background-2.jpg);
     background-size: cover;
 }
-/* selects p directly after h2*/
 * {
     text-align: center;
 }
-h1, p {
+h1{
     color: #93002D;
     border: 5px solid rgba(64, 120, 224, 0.5);
     cursor: pointer;
 }
-h1, p {
+/* h1{
     color: blue;
     border: 5px solid rgba(64, 120, 224, 0.5);
     cursor: pointer;
+} */
+
+img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
 }
